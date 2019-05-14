@@ -1,0 +1,4 @@
+C:\Users\dmitryboz21\source\repos\CAESAR\CAESAR\obj\Debug\CAESAR.csprojAssemblyReference.cache
+C:\Users\dmitryboz21\source\repos\CAESAR\CAESAR\obj\Debug\CAESAR.Properties.Resources.resources
+C:\Users\dmitryboz21\source\repos\CAESAR\CAESAR\obj\Debug\CAESAR.csproj.GenerateResource.cache
+C:\Users\dmitryboz21\source\repos\CAESAR\CAESAR\obj\Debug\CAESAR.csproj.CoreCompileInputs.cache
