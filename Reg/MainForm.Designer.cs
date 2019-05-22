@@ -1,6 +1,6 @@
 ﻿namespace Reg
 {
-    partial class RegForm
+    partial class MainForm
     {
         /// <summary>
         /// Требуется переменная конструктора.
@@ -42,18 +42,14 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox_hack = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox_hack2 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
+            this.textBox_hack = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKeyRus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKeyEng)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // nameLabel
@@ -72,7 +68,7 @@
             this.panel1.Controls.Add(this.nameLabel);
             this.panel1.Location = new System.Drawing.Point(826, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(162, 192);
+            this.panel1.Size = new System.Drawing.Size(162, 223);
             this.panel1.TabIndex = 1;
             // 
             // button1
@@ -87,30 +83,30 @@
             // 
             // textBox_input
             // 
-            this.textBox_input.Location = new System.Drawing.Point(12, 40);
+            this.textBox_input.Location = new System.Drawing.Point(0, 37);
             this.textBox_input.Multiline = true;
             this.textBox_input.Name = "textBox_input";
             this.textBox_input.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_input.Size = new System.Drawing.Size(491, 183);
+            this.textBox_input.Size = new System.Drawing.Size(503, 197);
             this.textBox_input.TabIndex = 2;
             this.textBox_input.TextChanged += new System.EventHandler(this.textBox_input_TextChanged);
             this.textBox_input.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_input_KeyDown);
             // 
             // textBox_output
             // 
-            this.textBox_output.Location = new System.Drawing.Point(12, 229);
+            this.textBox_output.Location = new System.Drawing.Point(0, 265);
             this.textBox_output.Multiline = true;
             this.textBox_output.Name = "textBox_output";
             this.textBox_output.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_output.Size = new System.Drawing.Size(491, 280);
+            this.textBox_output.Size = new System.Drawing.Size(503, 256);
             this.textBox_output.TabIndex = 3;
             this.textBox_output.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_output_KeyDown);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(509, 11);
+            this.button2.Location = new System.Drawing.Point(664, 39);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(311, 41);
+            this.button2.Size = new System.Drawing.Size(156, 44);
             this.button2.TabIndex = 5;
             this.button2.Text = "Зашифровать";
             this.button2.UseVisualStyleBackColor = true;
@@ -118,7 +114,7 @@
             // 
             // numericUpDownKeyRus
             // 
-            this.numericUpDownKeyRus.Location = new System.Drawing.Point(107, 12);
+            this.numericUpDownKeyRus.Location = new System.Drawing.Point(345, 13);
             this.numericUpDownKeyRus.Maximum = new decimal(new int[] {
             32,
             0,
@@ -131,7 +127,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 14);
+            this.label1.Location = new System.Drawing.Point(250, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 7;
@@ -139,7 +135,7 @@
             // 
             // numericUpDownKeyEng
             // 
-            this.numericUpDownKeyEng.Location = new System.Drawing.Point(222, 12);
+            this.numericUpDownKeyEng.Location = new System.Drawing.Point(460, 13);
             this.numericUpDownKeyEng.Maximum = new decimal(new int[] {
             25,
             0,
@@ -152,7 +148,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 14);
+            this.label2.Location = new System.Drawing.Point(314, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 13);
             this.label2.TabIndex = 9;
@@ -161,7 +157,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(190, 14);
+            this.label3.Location = new System.Drawing.Point(428, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 10;
@@ -169,9 +165,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(509, 55);
+            this.button3.Location = new System.Drawing.Point(509, 39);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(311, 41);
+            this.button3.Size = new System.Drawing.Size(156, 44);
             this.button3.TabIndex = 11;
             this.button3.Text = "Расшифровать";
             this.button3.UseVisualStyleBackColor = true;
@@ -179,7 +175,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(299, 11);
+            this.button4.Location = new System.Drawing.Point(537, 12);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(80, 20);
             this.button4.TabIndex = 12;
@@ -189,83 +185,77 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(509, 102);
+            this.button5.Location = new System.Drawing.Point(509, 83);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(311, 47);
+            this.button5.Size = new System.Drawing.Size(156, 44);
             this.button5.TabIndex = 13;
             this.button5.Text = "100% hack";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(515, 208);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(472, 300);
-            this.tabControl1.TabIndex = 14;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.textBox_hack);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(464, 274);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Результат перебора";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // textBox_hack
-            // 
-            this.textBox_hack.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_hack.Location = new System.Drawing.Point(3, 3);
-            this.textBox_hack.Multiline = true;
-            this.textBox_hack.Name = "textBox_hack";
-            this.textBox_hack.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_hack.Size = new System.Drawing.Size(458, 268);
-            this.textBox_hack.TabIndex = 5;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.textBox_hack2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(464, 274);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Реультат частотного анализа";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // textBox_hack2
-            // 
-            this.textBox_hack2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_hack2.Location = new System.Drawing.Point(3, 3);
-            this.textBox_hack2.Multiline = true;
-            this.textBox_hack2.Name = "textBox_hack2";
-            this.textBox_hack2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_hack2.Size = new System.Drawing.Size(458, 268);
-            this.textBox_hack2.TabIndex = 0;
-            // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(509, 155);
+            this.button6.Location = new System.Drawing.Point(664, 83);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(311, 46);
+            this.button6.Size = new System.Drawing.Size(156, 44);
             this.button6.TabIndex = 15;
             this.button6.Text = "Частотный анализ";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // RegForm
+            // textBox_hack
+            // 
+            this.textBox_hack.Location = new System.Drawing.Point(509, 265);
+            this.textBox_hack.Multiline = true;
+            this.textBox_hack.Name = "textBox_hack";
+            this.textBox_hack.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox_hack.Size = new System.Drawing.Size(480, 256);
+            this.textBox_hack.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(0, 3);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label4.Size = new System.Drawing.Size(167, 25);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Входные данные";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(0, 237);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label5.Size = new System.Drawing.Size(249, 25);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Дешифрованные данные";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(518, 237);
+            this.label6.Name = "label6";
+            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label6.Size = new System.Drawing.Size(75, 25);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Взлом";
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(989, 521);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox_hack);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -280,17 +270,13 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "RegForm";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reg";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKeyRus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKeyEng)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,12 +298,11 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox textBox_hack;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox textBox_hack2;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBox_hack;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 

@@ -28,3 +28,13 @@ C:\Users\dmitryboz21\source\repos\CAESAR\CAESAR\obj\Reg\obj\x86\Debug\Reg.csproj
 C:\Users\dmitryboz21\source\repos\CAESAR\CAESAR\obj\Reg\obj\x86\Debug\Reg.csproj.CoreCompileInputs.cache
 C:\Users\dmitryboz21\source\repos\CAESAR\CAESAR\obj\Reg\obj\x86\Debug\Reg.exe
 C:\Users\dmitryboz21\source\repos\CAESAR\CAESAR\obj\Reg\obj\x86\Debug\Reg.pdb
+C:\Users\dmitryboz21\Source\Repos\pi17b-groupdynamics\Caesar_Vadim\Reg\bin\Debug\Reg.exe
+C:\Users\dmitryboz21\Source\Repos\pi17b-groupdynamics\Caesar_Vadim\Reg\bin\Debug\Reg.pdb
+C:\Users\dmitryboz21\Source\Repos\pi17b-groupdynamics\Caesar_Vadim\Reg\obj\x86\Debug\Reg.csprojAssemblyReference.cache
+C:\Users\dmitryboz21\Source\Repos\pi17b-groupdynamics\Caesar_Vadim\Reg\obj\x86\Debug\Reg.MainForm.resources
+C:\Users\dmitryboz21\Source\Repos\pi17b-groupdynamics\Caesar_Vadim\Reg\obj\x86\Debug\Reg.Properties.Resources.resources
+C:\Users\dmitryboz21\Source\Repos\pi17b-groupdynamics\Caesar_Vadim\Reg\obj\x86\Debug\Reg.RegistrationForm.resources
+C:\Users\dmitryboz21\Source\Repos\pi17b-groupdynamics\Caesar_Vadim\Reg\obj\x86\Debug\Reg.csproj.GenerateResource.cache
+C:\Users\dmitryboz21\Source\Repos\pi17b-groupdynamics\Caesar_Vadim\Reg\obj\x86\Debug\Reg.csproj.CoreCompileInputs.cache
+C:\Users\dmitryboz21\Source\Repos\pi17b-groupdynamics\Caesar_Vadim\Reg\obj\x86\Debug\Reg.exe
+C:\Users\dmitryboz21\Source\Repos\pi17b-groupdynamics\Caesar_Vadim\Reg\obj\x86\Debug\Reg.pdb

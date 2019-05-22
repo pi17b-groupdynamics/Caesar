@@ -14,7 +14,7 @@ namespace Reg
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RegForm());
+            Application.Run(new MainForm());
         }
     }
 }
