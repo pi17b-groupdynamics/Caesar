@@ -47,6 +47,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKeyRus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKeyEng)).BeginInit();
@@ -104,7 +108,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(664, 39);
+            this.button2.Location = new System.Drawing.Point(664, 40);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(156, 44);
             this.button2.TabIndex = 5;
@@ -114,7 +118,7 @@
             // 
             // numericUpDownKeyRus
             // 
-            this.numericUpDownKeyRus.Location = new System.Drawing.Point(345, 13);
+            this.numericUpDownKeyRus.Location = new System.Drawing.Point(441, 10);
             this.numericUpDownKeyRus.Maximum = new decimal(new int[] {
             32,
             0,
@@ -127,7 +131,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(250, 15);
+            this.label1.Location = new System.Drawing.Point(362, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 7;
@@ -135,7 +139,7 @@
             // 
             // numericUpDownKeyEng
             // 
-            this.numericUpDownKeyEng.Location = new System.Drawing.Point(460, 13);
+            this.numericUpDownKeyEng.Location = new System.Drawing.Point(556, 10);
             this.numericUpDownKeyEng.Maximum = new decimal(new int[] {
             25,
             0,
@@ -148,7 +152,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(314, 15);
+            this.label2.Location = new System.Drawing.Point(410, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 13);
             this.label2.TabIndex = 9;
@@ -157,7 +161,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(428, 15);
+            this.label3.Location = new System.Drawing.Point(524, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 10;
@@ -165,7 +169,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(509, 39);
+            this.button3.Location = new System.Drawing.Point(509, 40);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(156, 44);
             this.button3.TabIndex = 11;
@@ -175,9 +179,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(537, 12);
+            this.button4.Location = new System.Drawing.Point(628, -1);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(80, 20);
+            this.button4.Size = new System.Drawing.Size(80, 39);
             this.button4.TabIndex = 12;
             this.button4.Text = "Случайно";
             this.button4.UseVisualStyleBackColor = true;
@@ -185,7 +189,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(509, 83);
+            this.button5.Location = new System.Drawing.Point(509, 84);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(156, 44);
             this.button5.TabIndex = 13;
@@ -195,7 +199,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(664, 83);
+            this.button6.Location = new System.Drawing.Point(664, 84);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(156, 44);
             this.button6.TabIndex = 15;
@@ -219,9 +223,9 @@
             this.label4.Location = new System.Drawing.Point(0, 3);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(167, 25);
+            this.label4.Size = new System.Drawing.Size(165, 25);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Входные данные";
+            this.label4.Text = "Исходный текст";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
@@ -231,9 +235,9 @@
             this.label5.Location = new System.Drawing.Point(0, 237);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(249, 25);
+            this.label5.Size = new System.Drawing.Size(235, 25);
             this.label5.TabIndex = 18;
-            this.label5.Text = "Дешифрованные данные";
+            this.label5.Text = "Дешифрованный текст";
             // 
             // label6
             // 
@@ -246,11 +250,55 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Взлом";
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(714, -1);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(104, 20);
+            this.button7.TabIndex = 20;
+            this.button7.Text = "Сохранить ключи";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(714, 18);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(104, 20);
+            this.button8.TabIndex = 21;
+            this.button8.Text = "Загрузить ключи";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(280, 237);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(163, 27);
+            this.button9.TabIndex = 22;
+            this.button9.Text = "Сохранить";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(173, 3);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(83, 27);
+            this.button10.TabIndex = 23;
+            this.button10.Text = "Загрузить";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(989, 521);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -303,6 +351,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
     }
 }
 

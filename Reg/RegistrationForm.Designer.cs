@@ -30,20 +30,20 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.enterButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.exitButton = new System.Windows.Forms.Button();
-            this.loginTextBox = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.regButton = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.regPassTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.regPassTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.regButton = new System.Windows.Forms.Button();
-            this.enterButton = new System.Windows.Forms.Button();
+            this.loginTextBox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -80,22 +80,27 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // tabPage2
+            // enterButton
             // 
-            this.tabPage2.Controls.Add(this.regButton);
-            this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.regPassTextBox);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.loginTextBox);
-            this.tabPage2.Location = new System.Drawing.Point(4, 5);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(724, 482);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.enterButton.Location = new System.Drawing.Point(167, 286);
+            this.enterButton.Name = "enterButton";
+            this.enterButton.Size = new System.Drawing.Size(264, 55);
+            this.enterButton.TabIndex = 21;
+            this.enterButton.Text = "Войти";
+            this.enterButton.UseVisualStyleBackColor = true;
+            this.enterButton.Click += new System.EventHandler(this.enterButton_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(437, 286);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 55);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Я не зарегестрирован";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
@@ -134,19 +139,58 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(628, 10);
+            this.exitButton.Location = new System.Drawing.Point(556, 10);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(75, 23);
+            this.exitButton.Size = new System.Drawing.Size(147, 23);
             this.exitButton.TabIndex = 10;
-            this.exitButton.Text = "Закрыть";
+            this.exitButton.Text = "Switch language to english";
             this.exitButton.UseVisualStyleBackColor = true;
             // 
-            // loginTextBox
+            // tabPage2
             // 
-            this.loginTextBox.Location = new System.Drawing.Point(166, 220);
-            this.loginTextBox.Name = "loginTextBox";
-            this.loginTextBox.Size = new System.Drawing.Size(403, 20);
-            this.loginTextBox.TabIndex = 12;
+            this.tabPage2.Controls.Add(this.regButton);
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.regPassTextBox);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.loginTextBox);
+            this.tabPage2.Location = new System.Drawing.Point(4, 5);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(724, 482);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // regButton
+            // 
+            this.regButton.AutoSize = true;
+            this.regButton.Location = new System.Drawing.Point(166, 286);
+            this.regButton.Name = "regButton";
+            this.regButton.Size = new System.Drawing.Size(286, 55);
+            this.regButton.TabIndex = 19;
+            this.regButton.Text = "Зарегистрироваться";
+            this.regButton.UseVisualStyleBackColor = true;
+            this.regButton.Click += new System.EventHandler(this.regButton_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(458, 286);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(111, 55);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "Назад";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // regPassTextBox
+            // 
+            this.regPassTextBox.Location = new System.Drawing.Point(166, 260);
+            this.regPassTextBox.Name = "regPassTextBox";
+            this.regPassTextBox.PasswordChar = '*';
+            this.regPassTextBox.Size = new System.Drawing.Size(403, 20);
+            this.regPassTextBox.TabIndex = 17;
+            this.regPassTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -166,55 +210,12 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Логин";
             // 
-            // regPassTextBox
+            // loginTextBox
             // 
-            this.regPassTextBox.Location = new System.Drawing.Point(166, 260);
-            this.regPassTextBox.Name = "regPassTextBox";
-            this.regPassTextBox.PasswordChar = '*';
-            this.regPassTextBox.Size = new System.Drawing.Size(403, 20);
-            this.regPassTextBox.TabIndex = 17;
-            this.regPassTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(437, 286);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 55);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Я не зарегестрирован";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(458, 286);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 55);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Назад";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // regButton
-            // 
-            this.regButton.AutoSize = true;
-            this.regButton.Location = new System.Drawing.Point(166, 286);
-            this.regButton.Name = "regButton";
-            this.regButton.Size = new System.Drawing.Size(286, 55);
-            this.regButton.TabIndex = 19;
-            this.regButton.Text = "Зарегистрироваться";
-            this.regButton.UseVisualStyleBackColor = true;
-            this.regButton.Click += new System.EventHandler(this.regButton_Click_1);
-            // 
-            // enterButton
-            // 
-            this.enterButton.Location = new System.Drawing.Point(167, 286);
-            this.enterButton.Name = "enterButton";
-            this.enterButton.Size = new System.Drawing.Size(264, 55);
-            this.enterButton.TabIndex = 21;
-            this.enterButton.Text = "Войти";
-            this.enterButton.UseVisualStyleBackColor = true;
-            this.enterButton.Click += new System.EventHandler(this.enterButton_Click_1);
+            this.loginTextBox.Location = new System.Drawing.Point(166, 220);
+            this.loginTextBox.Name = "loginTextBox";
+            this.loginTextBox.Size = new System.Drawing.Size(403, 20);
+            this.loginTextBox.TabIndex = 12;
             // 
             // RegistrationForm
             // 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
@@ -128,12 +129,37 @@ namespace Reg
         private void button2_Click(object sender, EventArgs e)
         {
             textBox_output.Text = Rotate((int)numericUpDownKeyEng.Value, (int)numericUpDownKeyRus.Value, textBox_input.Text);
-   
-            
+          
+                try
+                {
+                    StreamWriter sw = new StreamWriter(registrationForm.login+"_log.txt", true);
+                    sw.WriteLine("------------------------------------------------------------------------\r\n");
+                    sw.WriteLine(DateTime.Now + " Результат шифрования:\r\n");
+                    sw.WriteLine(textBox_output.Text + "\r\n");
+                    sw.Close();
+                }
+                catch (Exception ex) // ошибки
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
         }
         private void button3_Click(object sender, EventArgs e)
         {
             textBox_output.Text = Rotate(26 - (int)numericUpDownKeyEng.Value, 33 - (int)numericUpDownKeyRus.Value, textBox_input.Text);
+
+            try
+            {
+                StreamWriter sw = new StreamWriter(registrationForm.login + "_log.txt", true);
+                sw.WriteLine("------------------------------------------------------------------------\r\n");
+                sw.WriteLine(DateTime.Now + " Результат дешифровки:\r\n");
+                sw.WriteLine(textBox_output.Text + "\r\n");
+                sw.Close();
+            }
+            catch (Exception ex) // ошибки
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -273,6 +299,100 @@ d	4.253%
 
         private void label4_Click(object sender, EventArgs e)
         {
+
+        }
+        private void saveAsOwnTextFormat(string textToSave)
+        {
+
+            SaveFileDialog saveFile1 = new SaveFileDialog();
+            saveFile1.DefaultExt = "*.txt";
+            saveFile1.Filter = "Text files|*.txt";
+            if (saveFile1.ShowDialog() == System.Windows.Forms.DialogResult.OK &&
+                saveFile1.FileName.Length > 0)
+            {
+                try
+                {
+                    //Создаём или перезаписываем существующий файл
+                    StreamWriter sw = File.CreateText(saveFile1.FileName);
+                    //Записываем текст в поток файла
+                    sw.WriteLine(textToSave);
+                    //Закрываем файл
+                    sw.Close();
+                }
+                catch (Exception ex) // ошибки
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+        private string openFromOwnTextFormat()
+        {
+            OpenFileDialog openfile1 = new OpenFileDialog();
+            openfile1.DefaultExt = "*.txt";
+            openfile1.Filter = "Text files|*.txt";
+            if (openfile1.ShowDialog() == System.Windows.Forms.DialogResult.OK &&
+                openfile1.FileName.Length > 0)
+            {
+
+                string mytext = "";
+                try
+                {
+                    using (StreamReader sr = new StreamReader(openfile1.FileName))
+                    {
+                        string line;
+                        while ((line = sr.ReadLine()) != null)
+                        {
+                            mytext += line + "\r\n";
+                        }
+                    }
+                    return mytext;
+                }
+                catch
+                {
+                    MessageBox.Show("Error when opening file");
+                    
+                }
+            }
+            return "";
+        }
+        private void button9_Click(object sender, EventArgs e)
+        {
+            saveAsOwnTextFormat(textBox_output.Text);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            textBox_input.Text = openFromOwnTextFormat();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            saveAsOwnTextFormat(numericUpDownKeyRus.Value.ToString() + "|" + numericUpDownKeyEng.Value.ToString());
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            string keys = openFromOwnTextFormat();
+            string[] words = keys.Split(new char[] { '|' });
+            int val = -2;
+             
+            if (Int32.TryParse(words[0], out val) && val <= 32)
+            {
+                numericUpDownKeyRus.Value = Int32.Parse(words[0]);
+                val = -2;
+
+                if (Int32.TryParse(words[1], out val) && val<=25)
+                {
+                    numericUpDownKeyEng.Value = Int32.Parse(words[1]);
+                }
+                else
+                {
+                    MessageBox.Show("Файл повреждён");
+                }
+            }
+            else {
+                MessageBox.Show("Файл повреждён");
+            }
 
         }
     }
