@@ -48,3 +48,4 @@ C:\Users\dmitryboz21\Downloads\Caesar_Vadim\Reg\obj\x86\Debug\Reg.csproj.Generat
 C:\Users\dmitryboz21\Downloads\Caesar_Vadim\Reg\obj\x86\Debug\Reg.csproj.CoreCompileInputs.cache
 C:\Users\dmitryboz21\Downloads\Caesar_Vadim\Reg\obj\x86\Debug\Reg.exe
 C:\Users\dmitryboz21\Downloads\Caesar_Vadim\Reg\obj\x86\Debug\Reg.pdb
+C:\Users\dmitryboz21\Downloads\Caesar_Vadim\Reg\obj\x86\Debug\Reg.SettingsForm.resources

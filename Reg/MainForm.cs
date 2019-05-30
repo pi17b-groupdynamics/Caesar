@@ -12,14 +12,29 @@ namespace Reg
     public partial class MainForm : Form
     {
         RegistrationForm registrationForm = new RegistrationForm();
-
+        SettingsForm settingsForm = new SettingsForm();
         public MainForm()
         {
             InitializeComponent();
 
             registrationForm.ShowDialog(); // Отображаем форму авторизации.
-
+            setLang(registrationForm.lang);
             nameLabel.Text = "User: " + registrationForm.login;
+                if (registrationForm.PathOfPicture != "NonChoosed" && registrationForm.PathOfPicture != String.Empty)
+            {
+                try
+                {
+                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBox1.Image = Image.FromFile(registrationForm.PathOfPicture);
+                }
+                catch (OutOfMemoryException ex)
+                {
+                    MessageBox.Show("Ошибка чтения картинки");
+                    return;
+                }
+
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,6 +45,20 @@ namespace Reg
             registrationForm.ShowDialog(); // Отображаем форму авторизации.
             this.Show();
             nameLabel.Text = "User: " + registrationForm.login;
+            if (registrationForm.PathOfPicture != "NonChoosed" && registrationForm.PathOfPicture != String.Empty)
+            {
+                try
+                {
+                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBox1.Image = Image.FromFile(registrationForm.PathOfPicture);
+                }
+                catch (OutOfMemoryException ex)
+                {
+                    MessageBox.Show("Ошибка чтения картинки");
+                    return;
+                }
+
+            }
         }
 
 
@@ -394,6 +423,62 @@ d	4.253%
                 MessageBox.Show("Файл повреждён");
             }
 
+        }
+             
+
+        void setLang(int lang)
+        {
+            label1.Text = registrationForm.labelKeys[lang];
+            label4.Text = registrationForm.labelOrigText[lang];
+            label5.Text = registrationForm.labelProcessedText[lang];
+            label6.Text = registrationForm.labelHack[lang];
+            button10.Text = registrationForm.buttonLoad[lang];
+            button9.Text = registrationForm.buttonSave[lang];
+            button4.Text = registrationForm.buttonRandomKeys[lang];
+            button7.Text = registrationForm.buttonSaveKeys[lang];
+            button8.Text = registrationForm.buttonLoadKeys[lang];
+            button2.Text = registrationForm.buttonEncrypt[lang];
+            button3.Text = registrationForm.buttonDecrypt[lang];
+            button5.Text = registrationForm.buttonHack1[lang];
+            button6.Text = registrationForm.buttonHack2[lang];
+            button1.Text = registrationForm.buttonExit[lang];
+            button11.Text = registrationForm.buttonSwitchLang[lang];
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            registrationForm.lang = registrationForm.lang == 0 ? 1 : 0;
+            setLang(registrationForm.lang);
+        }
+
+            
+private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            registrationForm.selectTab(2);
+            this.Hide();          
+            registrationForm.ShowDialog(); // Отображаем форму авторизации.
+            this.Show();
+            registrationForm.selectTab(0);
+            nameLabel.Text = "User: " + registrationForm.login;
+            if (registrationForm.PathOfPicture != "NonChoosed" && registrationForm.PathOfPicture != String.Empty)
+            {
+                try
+                {
+                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBox1.Image = Image.FromFile(registrationForm.PathOfPicture);
+                }
+                catch (OutOfMemoryException ex)
+                {
+                    MessageBox.Show("Ошибка чтения картинки");
+                    return;
+                }
+
+            }
         }
     }
 }

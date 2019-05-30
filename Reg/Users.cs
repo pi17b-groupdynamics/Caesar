@@ -10,5 +10,6 @@ namespace Reg
     {
         public List<string> Logins = new List<string>(); // Логин.
         public List<string> Passwords = new List<string>(); // Пароль.
+        public List<string> PathOfPicture = new List<string>(); // Пароль.
     }
 }

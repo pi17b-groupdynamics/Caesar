@@ -30,6 +30,8 @@
         {
             this.nameLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button11 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox_input = new System.Windows.Forms.TextBox();
             this.textBox_output = new System.Windows.Forms.TextBox();
@@ -51,7 +53,9 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKeyRus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKeyEng)).BeginInit();
             this.SuspendLayout();
@@ -68,18 +72,40 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.button12);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.button11);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.nameLabel);
-            this.panel1.Location = new System.Drawing.Point(826, 0);
+            this.panel1.Location = new System.Drawing.Point(979, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(162, 223);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(42, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(85, 85);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(39, 119);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(118, 45);
+            this.button11.TabIndex = 2;
+            this.button11.Text = "Switch language";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(17, 129);
+            this.button1.Location = new System.Drawing.Point(39, 170);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 32);
+            this.button1.Size = new System.Drawing.Size(118, 45);
             this.button1.TabIndex = 1;
             this.button1.Text = "Выйти";
             this.button1.UseVisualStyleBackColor = true;
@@ -87,7 +113,7 @@
             // 
             // textBox_input
             // 
-            this.textBox_input.Location = new System.Drawing.Point(0, 37);
+            this.textBox_input.Location = new System.Drawing.Point(0, 35);
             this.textBox_input.Multiline = true;
             this.textBox_input.Name = "textBox_input";
             this.textBox_input.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -102,15 +128,15 @@
             this.textBox_output.Multiline = true;
             this.textBox_output.Name = "textBox_output";
             this.textBox_output.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_output.Size = new System.Drawing.Size(503, 256);
+            this.textBox_output.Size = new System.Drawing.Size(503, 301);
             this.textBox_output.TabIndex = 3;
             this.textBox_output.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_output_KeyDown);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(664, 40);
+            this.button2.Location = new System.Drawing.Point(507, 94);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 44);
+            this.button2.Size = new System.Drawing.Size(230, 44);
             this.button2.TabIndex = 5;
             this.button2.Text = "Зашифровать";
             this.button2.UseVisualStyleBackColor = true;
@@ -118,7 +144,7 @@
             // 
             // numericUpDownKeyRus
             // 
-            this.numericUpDownKeyRus.Location = new System.Drawing.Point(441, 10);
+            this.numericUpDownKeyRus.Location = new System.Drawing.Point(441, 9);
             this.numericUpDownKeyRus.Maximum = new decimal(new int[] {
             32,
             0,
@@ -131,7 +157,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(362, 12);
+            this.label1.Location = new System.Drawing.Point(362, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 7;
@@ -139,7 +165,7 @@
             // 
             // numericUpDownKeyEng
             // 
-            this.numericUpDownKeyEng.Location = new System.Drawing.Point(556, 10);
+            this.numericUpDownKeyEng.Location = new System.Drawing.Point(556, 9);
             this.numericUpDownKeyEng.Maximum = new decimal(new int[] {
             25,
             0,
@@ -152,7 +178,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(410, 12);
+            this.label2.Location = new System.Drawing.Point(410, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 13);
             this.label2.TabIndex = 9;
@@ -161,7 +187,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(524, 12);
+            this.label3.Location = new System.Drawing.Point(524, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 10;
@@ -169,9 +195,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(509, 40);
+            this.button3.Location = new System.Drawing.Point(507, 44);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(156, 44);
+            this.button3.Size = new System.Drawing.Size(230, 44);
             this.button3.TabIndex = 11;
             this.button3.Text = "Расшифровать";
             this.button3.UseVisualStyleBackColor = true;
@@ -189,19 +215,19 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(509, 84);
+            this.button5.Location = new System.Drawing.Point(743, 44);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(156, 44);
+            this.button5.Size = new System.Drawing.Size(230, 44);
             this.button5.TabIndex = 13;
-            this.button5.Text = "100% hack";
+            this.button5.Text = "Взлом перебором";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(664, 84);
+            this.button6.Location = new System.Drawing.Point(743, 94);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(156, 44);
+            this.button6.Size = new System.Drawing.Size(230, 44);
             this.button6.TabIndex = 15;
             this.button6.Text = "Частотный анализ";
             this.button6.UseVisualStyleBackColor = true;
@@ -213,14 +239,14 @@
             this.textBox_hack.Multiline = true;
             this.textBox_hack.Name = "textBox_hack";
             this.textBox_hack.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_hack.Size = new System.Drawing.Size(480, 256);
+            this.textBox_hack.Size = new System.Drawing.Size(632, 301);
             this.textBox_hack.TabIndex = 16;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(0, 3);
+            this.label4.Location = new System.Drawing.Point(0, 2);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label4.Size = new System.Drawing.Size(165, 25);
@@ -235,9 +261,9 @@
             this.label5.Location = new System.Drawing.Point(0, 237);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(235, 25);
+            this.label5.Size = new System.Drawing.Size(210, 25);
             this.label5.TabIndex = 18;
-            this.label5.Text = "Дешифрованный текст";
+            this.label5.Text = "Обработанный текст";
             // 
             // label6
             // 
@@ -272,7 +298,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(280, 237);
+            this.button9.Location = new System.Drawing.Point(216, 235);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(163, 27);
             this.button9.TabIndex = 22;
@@ -282,19 +308,30 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(173, 3);
+            this.button10.Location = new System.Drawing.Point(171, 3);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(83, 27);
+            this.button10.Size = new System.Drawing.Size(163, 27);
             this.button10.TabIndex = 23;
             this.button10.Text = "Загрузить";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button12.Location = new System.Drawing.Point(0, 119);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(33, 96);
+            this.button12.TabIndex = 4;
+            this.button12.Text = "⚙";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(989, 521);
+            this.ClientSize = new System.Drawing.Size(1140, 566);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
@@ -323,6 +360,7 @@
             this.Text = "Reg";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKeyRus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKeyEng)).EndInit();
             this.ResumeLayout(false);
@@ -355,6 +393,9 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button12;
     }
 }
 
